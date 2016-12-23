@@ -1,0 +1,19 @@
+<h1><%= @loan.description %></h1>
+<h4>Amount: <%= @loan.amount %></h4>
+<h4>Term: <%= @loan.term %></h4>
+<h4>Balance: <%= @loan.balance %></h4>
+<h4>Approved: <%= @loan.approved %></h4>
+<h4>Next Fee to pay: </h4>
+<br>
+<form class="input_form" name="approve_loan" action="/admin_user_loan/<%= @loan.id %>" method="post">
+  <label>Interest ->  </label>
+  <input type="text" name="interest" value="" required="Interest must be filled out"><br><br>
+  <button class="btn" type="submit">Approve loan</button>
+</form><br>
+<form action="/admin_user_loan/<%= @loan.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn_delete" type="submit">Reject loan</button>
+</form>
+<br>
+<a href="/">Home</a>
+<br>

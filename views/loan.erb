@@ -1,0 +1,28 @@
+<h1><%= @loan.description %></h1>
+<h4>Amount: <%= @loan.amount.round %></h4>
+<h4>Term: <%= @loan.term %></h4>
+<h4>Balance: <%= @loan.balance.round %></h4>
+<h4>Approved: <%= @loan.approved %></h4>
+<h4>Next Fee to pay: <%= @fee_amount.round %></h4><br>
+
+<h2>Make a payment:</h2>
+<div class="items">
+  <form action="/loan/<%= @loan.id %>" method="post">
+    <input type="hidden" name="transaction_type" value="in">
+    <label>Amount to pay</label>
+    <input type="text" name="amount_paid" value="" required>
+    <label>Description</label>
+    <input type="text" name="description" value="">
+    <button class="btn_pay" type="submit">Pay</button>
+  </form>
+</div>
+<br>
+<h1>Transactions</h1>
+<div class="items">
+  <ul>
+    <% @transactions.each do |transaction| %>
+      <li>Transaction date: <%= transaction.transaction_date %> // Amount: <%= transaction.amount.round %> // Loan Balance: <%= transaction.loan_balance %> </li>
+    <% end %>
+  </ul>
+</div>
+<a href="/">Home</a>

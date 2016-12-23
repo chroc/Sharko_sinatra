@@ -1,0 +1,106 @@
+body {
+  background: linear-gradient(to left, #1CD8D2 , #93EDC7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img {
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Baloo Thambi', cursive;
+}
+
+h2, h4 {
+  font-family: 'Copse', serif;
+}
+
+.index {
+  text-align: center;
+}
+
+.btn {
+  background-color: #009cba;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #00baba;
+}
+
+.btn_delete {
+  background-color: #FF3333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn_delete:hover {
+  background-color: #ff5533
+}
+
+.btn_pay {
+  background-color: #009cba;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn_pay:hover {
+  background-color: #00CC66;
+}
+
+.input_form {
+  /*font-family: 'Copse', serif;*/
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+#logout_btn {
+  background-color: #009cba;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 50%;
+  float: bottom;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#logout_btn:hover {
+  background-color: #00baba;
+}
+
+.items {
+  font-family: 'Dekko', cursive;
+}

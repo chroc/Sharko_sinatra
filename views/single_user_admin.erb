@@ -1,0 +1,16 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<h2>Loans:</h2>
+<% @loans.each do |loan| %>
+  <li><%= loan.amount %> - <a href="/admin_user_loan/<%= loan.id %>"><%= loan.description %></a></li>
+<% end %>
+</ul><br>
+<form action="/user/admin/edit/<%= @user.id %>" method="get">
+  <button class="btn" type="submit">Edit user</button>
+</form><br>
+<form action="/user/admin/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn_delete" type="submit">Delete user</button>
+</form><br>
+<div class="error_message">
+  <%= @message %>
+</div>

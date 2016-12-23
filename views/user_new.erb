@@ -1,0 +1,38 @@
+<h1>Join us!!</h1>
+<div><%= @error_message %></div>
+<form class="input_form" action="/user" method="post">
+  <% if @user %>
+    <label>First name</label>
+    <input type="text" name="first_name" value="<%= @user.first_name %>" required><br>
+    <label>Last name</label>
+    <input type="text" name="last_name" value="<%= @user.last_name %>" required><br>
+    <label>email</label>
+    <input type="text" name="email" value="<%= @user.email %>" required><br>
+    <label>Phone number</label>
+    <input type="text" name="phone_number" value="<%= @user.phone_number %>"><br>
+    <label>Address</label>
+    <input type="text" name="address" value="<%= @user.address %>"><br>
+    <label>Id number</label>
+    <input type="text" name="id_number" value="<%= @user.user_number %>"><br>
+
+  <% else %>
+    <label>First name</label>
+    <input type="text" name="first_name" value="" required><br>
+    <label>Last name</label>
+    <input type="text" name="last_name" value="" required><br>
+    <label>email</label>
+    <input type="text" name="email" value="" required><br>
+    <label>Phone number</label>
+    <input type="text" name="phone_number" value=""><br>
+    <label>Address</label>
+    <input type="text" name="address" value=""><br>
+    <label>Id number</label>
+    <input type="text" name="id_number" value=""><br>
+  <% end %>
+
+  <label>Create a password</label>
+  <input type="password" name="password" value="" required><br>
+  <label>Retype the password</label>
+  <input type="password" name="password_confirmation" value=""><br>
+  <button class="btn" type="submit">Sign up</button>
+</form>

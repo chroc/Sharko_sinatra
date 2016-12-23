@@ -1,0 +1,15 @@
+<div class="index">
+  <h1>Sharko</h1>
+  <img src="/images/sharko.jpg" alt="sharko">
+  <form action="/" method="post">
+    <input type="hidden" name="action" value="signup">
+    <button class="btn">Sign up</button>
+  </form><br>
+  <form action="/" method="post">
+    <input type="hidden" name="action" value="login">
+    <button class="btn">Log in</button>
+  </form>
+  <% if logged_in? %>
+    <h1><%= current_user.email %></h1>
+  <% end %>
+</div>
