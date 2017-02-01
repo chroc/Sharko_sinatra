@@ -8,23 +8,31 @@
   <link href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cherry+Cream+Soda" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
-  <title>index</title>
+  <title>Sharko</title>
 </head>
 <body>
 
   <script src="/js/validations.js" charset="utf-8"></script>
 
-  <%= yield %>
-
-  <div id="logout_form">
-    <% if logged_in? %>
-      <br><br><form action="/session" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <button id="logout_btn">logout</button>
-      </form>
-    <% end %>
+  <div class="container">
+    <%= yield %>
+    <div id="logout_form">
+      <% if logged_in? %>
+        <br><br><form action="/session" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button id="logout_btn">logout</button>
+        </form>
+      <% end %>
+    </div>
   </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -213,6 +213,7 @@ post "/loan/:id" do
         redirect to "/user/#{@loan.user_id}"
       end
     end
+
 end
 
 # display a single loan from admin view

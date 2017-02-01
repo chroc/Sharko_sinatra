@@ -1,7 +1,7 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <h2>Loans:</h2>
 <% @loans.each do |loan| %>
-  <li><%= loan.amount %> - <a href="/admin_user_loan/<%= loan.id %>"><%= loan.description %></a></li>
+  <li class="items"><%= loan.amount %> - <a href="/admin_user_loan/<%= loan.id %>"><%= loan.description %></a></li>
 <% end %>
 </ul><br>
 <form action="/user/admin/edit/<%= @user.id %>" method="get">

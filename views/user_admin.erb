@@ -2,6 +2,6 @@
 <h2>Users:</h2>
 <ul>
   <% @users.each do |user| %>
-    <li><a href="/user/admin/<%= user.id %>"><%= user.first_name %> <%= user.last_name%></a></li>
+    <li class="items"><a href="/user/admin/<%= user.id %>"><%= user.first_name %> <%= user.last_name%></a></li>
   <% end %>
 </ul>

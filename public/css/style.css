@@ -82,6 +82,7 @@ h2, h4 {
   font-family: 'Cherry Cream Soda', cursive;
 }
 
+
 #logout_btn {
   background-color: #009cba;
   border: none;
@@ -102,5 +103,6 @@ h2, h4 {
 }
 
 .items {
+  size: 10px;
   font-family: 'Dekko', cursive;
 }

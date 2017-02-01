@@ -2,7 +2,7 @@
 <h1>Loans: </h1>
 <ul>
   <% @loans.each do |loan| %>
-    <li><a href="/loan/<%= loan.id %>"><%= loan.description %></a></li>
+    <li class="items"><a href="/loan/<%= loan.id %>"><%= loan.description %></a></li>
   <% end %>
 </ul>
 <button class='btn'><a href="/loan/new">Request a Loan!!</a></button><br>
